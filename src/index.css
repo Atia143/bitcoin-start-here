@@ -1,0 +1,81 @@
+@import "@fontsource-variable/assistant";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Continue here */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Assistant Variable', sans-serif;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 1s ease-out both;
+  }
+}
+
+/* section-style utility */
+
+@layer components {
+  .section-style {
+    @apply snap-start h-screen flex flex-col justify-center items-center text-center gap-8 md:gap-12 px-6 md:px-12 bg-black text-zinc-400;
+  }
+
+  .h1 {
+    @apply text-4xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  .h2 {
+    @apply text-3xl md:text-5xl font-semibold leading-snug tracking-normal;
+  }
+
+  .p {
+    @apply text-base md:text-lg leading-relaxed text-gray-500;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary.DEFAULT to-primary.dark text-black font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-primary/50 active:scale-95;
+  }
+  .btn-label {
+    @apply mt-1 text-sm text-zinc-500;
+  }
+
+  .debug-bg {
+    @apply bg-red-500;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text;
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant Variable', sans-serif;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl font-extrabold leading-[1.15] tracking-tight mb-10;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl font-bold leading-[1.25] tracking-normal mb-8;
+  }
+
+  p {
+    @apply text-lg md:text-xl leading-relaxed text-text-muted max-w-2xl mx-auto mb-6;
+  }
+}
