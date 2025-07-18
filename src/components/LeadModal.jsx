@@ -20,7 +20,7 @@ export default function LeadModal({ open, onClose }) {
     const res = await fetch("https://api.sheety.co/8efcf90425ada56016b70a65cfa92c37/btcLeadsNew/sheet1", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ lead: form }), // lead = שם הטבלה ב־Sheety
+      body: JSON.stringify({ sheet1: form }), // lead = שם הטבלה ב־Sheety
     });
     setProgress(80);
     if (res.ok) {
