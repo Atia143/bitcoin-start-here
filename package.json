@@ -10,7 +10,7 @@
   "dependencies": {
     "@fontsource-variable/assistant": "^5.2.6",
     "canvas-confetti": "^1.9.3",
-    "framer-motion": "^12.9.2",
+    "framer-motion": "^12.23.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
